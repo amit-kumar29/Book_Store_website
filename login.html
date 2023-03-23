@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+<style>
+    body{
+        background-color: black;
+    }
+    .box{
+        padding: 20px;
+        background-color: rgba(0, 255, 255, 0.23);
+        width: 70%;
+        height: 90%;
+        margin-left: 15%;
+        margin-right: 15%;
+        border: solid coral;
+        border-style: dashed;
+        color:rgb(0, 0, 0);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    fieldset{
+        background-color: rgb(254, 97, 35);
+    }
+    #lgd{
+        color: black;
+    }
+    input[type=text] ,textarea {  
+        width: 95%;  
+        padding: 15px;  
+        margin: 2px 0 10px 0;  
+        display: inline-block;  
+        border: none;  
+        background: #f1f1f1;  
+    }
+    input[type=password]{
+        width: 95%;  
+        padding: 15px;  
+        margin: 2px 0 10px 0;
+        display: inline-block;  
+        border: none;  
+        background: #f1f1f1;
+    }
+    #submit{
+        background-color: #4CAF50;  
+        color: rgb(245, 245, 245);  
+        padding: 16px 20px;  
+        margin: 8px 0;  
+        border: none;  
+        cursor: pointer;  
+        width: 70%;  
+        opacity: 0.9; 
+    }
+    #submit:hover{
+        opacity: 2;
+    }
+    #reset {  
+        background-color: #4CAF50;  
+        color: white;  
+        padding: 16px 20px;  
+        margin: 8px 0;  
+        border: none;  
+        cursor: pointer;  
+        width: 70%;  
+        opacity: 0.9;  
+    }  
+    #reset:hover {  
+        opacity: 1;  
+    }
+    td{
+        width:500px;
+        align-items: center;
+    }
+    h1{
+        color:black;
+    }
+</style>
+<script>    
+    function login(){
+        var j = document.getElementById("email").value;
+    var k = document.getElementById("pass").value;
+
+    if(j=="ak22mcf1r04@student.nitw.ac.in" && k=="amit@123")
+    {
+        alert("Login Successful.");
+    }
+    else{
+        alert("Login Failed.");
+    }
+    }
+</script>
+</head>
+<body>
+    <div class="box">
+        <h1 align="center">Online Book Store Login</h1>
+        <form type="text" method="post">
+        <fieldset>
+            <legend id="lgd"> Login </legend>
+            Email :
+            <input type="text" size="15" id="email">
+            <br><br>
+            Password :
+            <input type="password" size="15" id="pass">
+        </fieldset>
+        <table>
+            <tr>
+                <td> <input type="submit" id="submit" value="Submit" onclick="login()"> </td>
+                <td> <input type="reset" id="reset" value="reset"> </td>
+            </tr>
+        </table>
+    </form>
+    </div>
+</body>
+</html>

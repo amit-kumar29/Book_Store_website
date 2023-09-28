@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{  
+    font-family: Calibri, Helvetica, sans-serif;  
+    background-color: rgb(0, 0, 0);  
+}  
+.container {  
+    padding: 50px;  
+    background-color: rgb(35, 189, 224);  
+}  
+  
+input[type=text] ,textarea {  
+  width: 95%;  
+  padding: 15px;  
+  margin: 2px 0 10px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}
+input[type=password],input[type=userId]{
+    width: 95%;  
+    padding: 5px;  
+    margin: 2px 0 10px 0;
+    display: inline-block;  
+    border: none;  
+    background: #f1f1f1;
+}
+
+.registerbtn {  
+  background-color: #4CAF50;  
+  color: rgb(245, 245, 245);  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 50%;  
+  opacity: 0.9;  
+}  
+.registerbtn:hover {  
+  opacity: 2;  
+}
+.reset {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 50%;  
+  opacity: 0.9;  
+}  
+.reset:hover {  
+  opacity: 1;  
+}
+table{
+    width:95%;
+}
+#personal{
+    width: 50%;  
+    padding: 5px;  
+    margin: 2px 0 10px 0;  
+    display: inline-block;  
+    border: none;  
+    background: #f1f1f1; 
+}
+    </style>
+    <script>
+        function submit(){
+            alert("Registration successful\n Application number is : 234532");
+        }
+    </script>
+</head>
+<body>
+    <h3 align="center" style="color: rgb(5, 105, 105);"> STUDENT REGISTRATION FORM</h3>
+<br>
+<div class="container">
+<form type="text"  POST>
+<fieldset>
+    <legend> Basic Info </legend> 
+
+    <label>Firstname*     :</label>         
+    <input type="text" name="firstname" size="15" placeholder="Enter the firstname "/>  
+
+    <label> Middlename     :</label>         
+    <input type="text" name="middlename" size="15" placeholder="Enter the middlename "/>   
+
+    <label> Lastname*     :</label>       
+    <input type="text" name="lastname" size="15" placeholder="Enter the lastname "/> 
+
+ <br><br>
+
+    <label> RollNo. :* </label>       
+    <input type="text" name="email" size="15" placeholder="Enter your RollNo "/> 
+<br><br>
+
+    <label> Email ID:* </label>       
+    <input type="text" name="email" size="15" placeholder="Enter the Email ID "/>
+    <br><br>
+
+    <label>  PhoneNo. :   </label>  
+    <input type="text" name="phone" size="10"/>
+<br> <br>  
+
+    User ID:*  
+    <input type="userId" id="userId" name="userId"/>
+<br><br>
+
+        Password:*  
+    <input type="Password" id="pass" name="pass" required/>
+ <br> <br>
+
+        Re-type Password:*
+    <input type="Password" id="repass" name="repass" required/>
+ <br> <br>  
+<table>
+    <tr>
+        <td>  
+        <label>Branch*   :</label>   
+        <select>  
+        <option value="Branch">Branch</option>  
+        <option value="CSE">CSE</option>  
+        <option value="Mechanical">Mechanical</option>  
+        <option value="Civil">Civil</option>  
+        <option value="Management">Management</option>  
+        <option value="Chemical">Chemical</option>  
+        <option value="Biotech">Biotech</option>  
+        </select>
+        </td>
+<td>
+    <label>YearOfStudy*   :</label>   
+    <select>  
+    <option value="First">First</option>  
+    <option value="Second">Second</option>  
+    <option value="Third">Third</option>  
+    <option value="Fourth">Fourth</option>  
+    </select>
+</td>
+<td>
+    <label> Upload Image*  :</label>
+    <input type="file" id="myFile" name="filename"/>
+</td> 
+</tr>
+</table>
+</fieldset>
+
+<br> <br>
+
+<fieldset>
+    <legend>Personal Details </legend>   
+    <table>
+        <tr>
+            <td> 
+        Father  Name :  
+        <input type="text" id="personal" name="father"/>
+            </td>
+            <td>
+        Mother Name :  
+        <input type="text" id="personal" name="mother"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+        Contact No. :  
+        <input type="text" id="personal" name="pass"/>
+            </td>
+            <td>
+        Aadhar No.* :  
+        <input type="text" id="personal" name="aadahr"/>
+            </td>
+        </tr>
+    </table>             
+                 
+        DOB :*
+        <input type="date" id="personal">
+        </fieldset>
+
+        <fieldset style="height: auto; width: fit-content;">
+        <legend>Address</legend>
+        
+                Address 1 : 
+        <textarea cols="80" rows="5" value="address">  
+        </textarea>
+            
+                Address 2 :   
+        <textarea cols="80" rows="5" value="address">  
+        </textarea>
+        </fieldset>
+<table>
+    <tr>
+         <td style="width: 800px;"><input type="button" value="Submit" class="registerbtn" onclick="submit()"/> </td>
+         <td style="width: 800px;"><input type="reset" class="reset" /></td>
+    </tr>
+</table>
+         
+  
+</form>
+</div>
+</body>
+</html>
